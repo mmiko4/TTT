@@ -38,7 +38,6 @@ def num_to_y(num):
         return 2
     if num == 7 or num == 8 or num == 9:
         return 1
-
 def make_map():
     font = pygame.font.Font('freesansbold.ttf',64)
     p1txt = font.render('PLAYER',True,(10,10,10))
@@ -55,25 +54,15 @@ def make_map():
         pygame.draw.rect(screen,(122,122,122),(235+n*200,110,10,600))
 
         n+=1
-
 def cross(num):
     n = 0
     while n <= 156:
         pygame.draw.circle(screen, p1col, ((num_to_x(num) - 1) * 200 + 262+n, ((num_to_y(num) - 1)) * 200 + 137+n), 12)
         pygame.draw.circle(screen, p1col, ((num_to_x(num) - 1) * 200 + 262+n, ((num_to_y(num) - 1)) * 200 + 293-n), 12)
-
         n += 1
-    pygame.draw.circle(screen, p1col, ((num_to_x(num) - 1) * 200 + 262, ((num_to_y(num) - 1)) * 200 + 137), 12)
-    pygame.draw.circle(screen, p1col, ((num_to_x(num) - 1) * 200 + 262, ((num_to_y(num) - 1)) * 200 + 293), 12)
-    pygame.draw.circle(screen, p1col, ((num_to_x(num) - 1) * 200 + 418, ((num_to_y(num) - 1)) * 200 + 137), 12)
-    pygame.draw.circle(screen, p1col, ((num_to_x(num) - 1) * 200 + 418, ((num_to_y(num) - 1)) * 200 + 293), 12)
 def circle(num):
     pygame.draw.circle(screen, p2col, (340 + (num_to_x(num)-1)*200, 215 + (num_to_y(num)-1)*200), 85)
     pygame.draw.circle(screen, (0,0,0), (340 + (num_to_x(num)-1)*200, 215 + (num_to_y(num)-1)*200), 61)
-
-
-
-
 
 running = True
 while running:
